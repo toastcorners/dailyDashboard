@@ -12,4 +12,4 @@ user2 = User.create(name: "Urgen", birthday: "07/28/1995", city: "Queens")
 user3 = User.create(name: "Bob", birthday: "01/28/1958", city: "Baltimore", bio: "I'm Bob")
 user4 = User.create(name: "Tim", birthday: "09/18/1997", city: "Phoenix")
 
-
+# ua1 = UserArticle.create(user_id: user1, news_article_id: News_Article.id)
