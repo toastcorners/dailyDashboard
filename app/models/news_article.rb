@@ -8,10 +8,11 @@ class NewsArticle < ApplicationRecord
 
     def self.get_data 
         self.destroy_all
+        key = ENV['API_KEY']
 
         url = 'http://newsapi.org/v2/top-headlines?'\
         'country=us&'\
-        'apiKey=c4f89026ab284d16b31c980bde6643ef'
+        "#{key}"
         req = open(url)
         response_body = req.read
         data = JSON.parse(response_body)

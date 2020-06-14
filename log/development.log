@@ -1104,3 +1104,272 @@ Migrating to CreateUserArticles (20200613194534)
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ app/models/news_article.rb:21:in `block in get_data'
   [1m[36mNewsArticle Load (0.5ms)[0m  [1m[34mSELECT "news_articles".* FROM "news_articles" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (24.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "birthday", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Melissa"], ["birthday", "08/19/1989"], ["city", "Brooklyn"], ["created_at", "2020-06-14 07:50:13.168043"], ["updated_at", "2020-06-14 07:50:13.168043"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "birthday", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Urgen"], ["birthday", "07/28/1995"], ["city", "Queens"], ["created_at", "2020-06-14 07:50:13.173206"], ["updated_at", "2020-06-14 07:50:13.173206"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "birthday", "city", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bob"], ["birthday", "01/28/1958"], ["city", "Baltimore"], ["bio", "I'm Bob"], ["created_at", "2020-06-14 07:50:13.177453"], ["updated_at", "2020-06-14 07:50:13.177453"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (25.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "birthday", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tim"], ["birthday", "09/18/1997"], ["city", "Phoenix"], ["created_at", "2020-06-14 07:50:13.181623"], ["updated_at", "2020-06-14 07:50:13.181623"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mNewsArticle Load (22.9ms)[0m  [1m[34mSELECT "news_articles".* FROM "news_articles"[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 1]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (25.6ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 2]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 3]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 4]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 5]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 6]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 7]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (14.4ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 8]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 9]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 10]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 11]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 12]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 13]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 14]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 15]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 16]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 17]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 18]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 19]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[36mNewsArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "news_articles" WHERE "news_articles"."id" = $1[0m  [["id", 20]]
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:10:in `get_data'
+  [1m[35m (23.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Beijing marketplace infections trigger 'wartime emergency mode' - ABC News"], ["source", "YouTube"], ["description", "COVID-19 infections linked to Asia’s largest food market include 45 new coronavirus cases."], ["url", "https://www.youtube.com/watch?v=4OJJ4Up7Uc0"], ["img", "https://i.ytimg.com/vi/4OJJ4Up7Uc0/maxresdefault.jpg"], ["created_at", "2020-06-14 07:50:13.582810"], ["updated_at", "2020-06-14 07:50:13.582810"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Man dies after being shot by Atlanta police at Wendy’s drive-thru - Atlanta Journal Constitution"], ["source", "Atlanta Journal Constitution"], ["author", "Shaddi Abusaid, J. Scott Trubey"], ["description", "A 27-year-old man was shot and killed by  Atlanta police Friday evening during a struggle in a Wendy..."], ["url", "https://www.ajc.com/news/crime--law/man-shot-killed-atlanta-police-wendy-drive-thru/rUUFN6yfvgsevgIc2Q7ZkJ/"], ["img", "https://www.ajc.com/rf/image_large/Pub/p11/AJC/2020/06/13/Videos/4922422.vpx"], ["created_at", "2020-06-14 07:50:13.613772"], ["updated_at", "2020-06-14 07:50:13.613772"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Poland Accidentally Invades Czech Republic In 'Minor Misunderstanding' - NPR"], ["source", "NPR"], ["author", ""], ["description", "Their foreign ministries confirmed the mix-up, in which Polish soldiers mistakenly crossed the border and stopped people on the wrong side. Both countries seem to have taken it all in stride, though."], ["url", "https://www.npr.org/2020/06/13/876604403/poland-accidentally-invades-czech-republic-in-minor-misunderstanding"], ["img", "https://media.npr.org/include/images/facebook-default-wide.jpg?s=1400"], ["created_at", "2020-06-14 07:50:13.618304"], ["updated_at", "2020-06-14 07:50:13.618304"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "The race-related things that have changed since protests began around George Floyd's death - CNN"], ["source", "CNN"], ["author", "Scottie Andrew and Leah Asmelash, CNN"], ["description", "As protests around the world continue over police brutality and the deaths of Breonna Taylor and George Floyd, change is happening across the US."], ["url", "https://www.cnn.com/2020/06/13/us/changes-from-protests-george-floyd-trnd/index.html"], ["img", "https://cdn.cnn.com/cnnnext/dam/assets/200608132045-01-white-house-fence-blm-signs-0607-super-tease.jpg"], ["created_at", "2020-06-14 07:50:13.622678"], ["updated_at", "2020-06-14 07:50:13.622678"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Fox News removes altered photos of Seattle protest zone - USA TODAY"], ["source", "USA Today"], ["author", "The Associated Press"], ["description", "The Seattle Times reports Fox News’ website featured at least two photos on Friday that inserted an image of a man standing with a military-style rifle."], ["url", "https://www.usatoday.com/story/entertainment/tv/2020/06/13/george-floyd-fox-news-removes-altered-photos-seattle-protest-zone/3185387001/"], ["img", "https://www.gannett-cdn.com/presto/2020/05/28/USAT/ce692aa7-0927-40a7-b05b-3441d56171b5-VPC_WHO_WAS_GEORGE_FLOYD_DESK_THUMB.jpg?crop=1911,1075,x0,y0&width=1600&height=800&fit=bounds"], ["created_at", "2020-06-14 07:50:13.626892"], ["updated_at", "2020-06-14 07:50:13.626892"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (23.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Lauren Jauregui Closes Out Billboard’s Pride Prom With ‘50ft.’ Performance - Billboard"], ["source", "Billboard"], ["author", "Stephen Daw"], ["description", ""], ["url", "https://www.billboard.com/articles/news/pride/9402122/lauren-jauregui-pride-prom-performance"], ["img", "https://static.billboard.com/files/2020/06/Lauren-Jauregui-pride-performance-screenshot-billboard-1548-1591995704-1024x677.jpg"], ["created_at", "2020-06-14 07:50:13.633053"], ["updated_at", "2020-06-14 07:50:13.633053"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Microsoft's latest Windows 10 updates come with nasty printer bugs - Engadget"], ["source", "Engadget"], ["author", ""], ["description", "The latest updates for Windows 10 give the platform’s security a boost, but they unfortunately come with nasty bugs that make printing impossible, as well. Microsoft has published a notice acknowledging that update KB4557957 may render certain printers unable…"], ["url", "https://www.engadget.com/microsofts-windows-10-updates-printer-bugs-000112943.html"], ["img", "https://o.aolcdn.com/images/dims?resize=1200%2C630&crop=1200%2C630%2C0%2C0&quality=95&image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-images%2F2019-11%2Fdb7e5f80-0246-11ea-aeef-0961d18d78a4&client=amp-blogside-v2&signature=496ad3dba71b0b6cac60630dacfa50c2a89f3611"], ["created_at", "2020-06-14 07:50:13.663110"], ["updated_at", "2020-06-14 07:50:13.663110"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What It Will Take To Distribute A Coronavirus Vaccine To The Masses | NBC Nightly News - NBC News"], ["source", "YouTube"], ["description", "As scientists race to develop a vaccine for COVID-19, large shipping companies are already ramping up their capabilities to deliver more than a billion vacci..."], ["url", "https://www.youtube.com/watch?v=G1RvjRO3D7U"], ["img", "https://i.ytimg.com/vi/G1RvjRO3D7U/maxresdefault.jpg"], ["created_at", "2020-06-14 07:50:13.667706"], ["updated_at", "2020-06-14 07:50:13.667706"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "UFC Fight Night prediction -- Jessica Eye vs. Cynthia Calvillo: Fight card, start time, odds, live stream - CBS Sports"], ["source", "CBS Sports"], ["author", ""], ["description", "The pair of women's flyweights headline in Las Vegas on Saturday night"], ["url", "https://www.cbssports.com/mma/news/ufc-fight-night-prediction-jessica-eye-vs-cynthia-calvillo-fight-card-start-time-odds-live-stream/"], ["img", "https://sportshub.cbsistatic.com/i/r/2020/06/12/0e72c6ee-f49f-43da-b85f-308af53e1739/thumbnail/1200x675/353cd8341ddd87619f18dd9402349490/jessica-eye-weighin.jpg"], ["created_at", "2020-06-14 07:50:13.671656"], ["updated_at", "2020-06-14 07:50:13.671656"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Black police officers struggle with their racial and professional identity - CBS Evening News"], ["source", "YouTube"], ["description", "As protests against police brutality and racism continue, black police officers are often caught between the crossfires of their racial identity and professi..."], ["url", "https://www.youtube.com/watch?v=8c22zJu_qIo"], ["img", "https://i.ytimg.com/vi/8c22zJu_qIo/maxresdefault.jpg"], ["created_at", "2020-06-14 07:50:13.675670"], ["updated_at", "2020-06-14 07:50:13.675670"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (1.0ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "SpaceX's morning Starlink launch left behind a stunning cloud: Photos - Business Insider - Business Insider"], ["source", "Business Insider"], ["author", "Dave Mosher"], ["description", "The rocket company, founded by Elon Musk, lifted off its Starlink-8 mission to spectacular effect at 5:21 a.m. ET on June 13, 2020."], ["url", "https://www.businessinsider.com/spacex-starlink-internet-satellite-rocket-launch-glowing-cloud-photos-videos-2020-6"], ["img", "https://i.insider.com/5ee51fa2f0f4193de8261b84?width=1200&format=jpeg"], ["created_at", "2020-06-14 07:50:13.679491"], ["updated_at", "2020-06-14 07:50:13.679491"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Washington State sounds alarm over rising coronavirus cases | TheHill - The Hill"], ["source", "The Hill"], ["author", "Reid Wilson"], ["description", "Health officials in Washington are warning that the coronavirus is spreading more widely througho..."], ["url", "https://thehill.com/homenews/coronavirus-report/502620-washington-state-sounds-alarm-over-rising-coronavirus-cases"], ["img", "https://thehill.com/sites/default/files/insleejay_031620getty.jpg"], ["created_at", "2020-06-14 07:50:13.709283"], ["updated_at", "2020-06-14 07:50:13.709283"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "PM condemns “racist thuggery” as far-right protesters clash with police - BBC News - BBC News"], ["source", "YouTube"], ["description", "Extreme right-wing protesters have clashed with police in central London, with scenes of violence condemned by the Prime Minister Boris Johnson as “racist th..."], ["url", "https://www.youtube.com/watch?v=q_wWrr17Zfw"], ["img", "https://i.ytimg.com/vi/q_wWrr17Zfw/maxresdefault.jpg"], ["created_at", "2020-06-14 07:50:13.715820"], ["updated_at", "2020-06-14 07:50:13.715820"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Video shows white protesters inside Seattle's CHAZ being urged to give $10 to a black person - Daily Mail"], ["source", "Daily Mail"], ["author", "By Ariel Zilber For Dailymail.com Associated Press"], ["description", "A video uploaded to social media shows an unidentified protester giving a speech inside what looks like a baseball field in the CHAZ near the East Precinct in Seattle on Friday."], ["url", "https://www.dailymail.co.uk/news/article-8417937/Video-shows-white-protesters-inside-Seattles-CHAZ-urged-10-black-person.html"], ["img", "https://i.dailymail.co.uk/1s/2020/06/13/20/29575166-0-image-a-23_1592077859156.jpg"], ["created_at", "2020-06-14 07:50:13.721828"], ["updated_at", "2020-06-14 07:50:13.721828"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "MLB lands billion-dollar deal with Turner Sports to broadcast playoffs - New York Post "], ["source", "New York Post"], ["author", "Andrew Marchand"], ["description", "While MLB and the Players Association squabble over money and the 2020 season, the league has consummated a new billion-dollar deal with Turner Sports to keep a playoff package that includes one of…"], ["url", "https://nypost.com/2020/06/13/mlb-lands-billion-dollar-deal-with-turner-sports-to-broadcast-playoffs/"], ["img", "https://thenypost.files.wordpress.com/2020/06/virus_outbreak_mlb_baseball.2.jpg?quality=90&strip=all&w=1200"], ["created_at", "2020-06-14 07:50:13.759705"], ["updated_at", "2020-06-14 07:50:13.759705"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Human remains confirmed to be missing Idaho kids Joshua Vallow and Tylee Ryan - NBC News"], ["source", "NBC News"], ["author", "Minyvonne Burke"], ["description", "The human remains found on the property of Lori Vallow's husband belong to her two children Tylee Ryan and Joshua Vallow, Idaho authorities confirmed Saturday."], ["url", "https://www.nbcnews.com/news/us-news/human-remains-confirmed-be-missing-idaho-kids-joshua-vallow-tylee-n1231019"], ["img", "https://media1.s-nbcnews.com/j/newscms/2020_24/3248561/200228-lori-vallow-ew-1119a_5aa6551a58dcc9097774a2ded2b4cd7b.nbcnews-fp-1200-630.jpg"], ["created_at", "2020-06-14 07:50:13.766306"], ["updated_at", "2020-06-14 07:50:13.766306"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Stassi Schroeder Steps Out With Beau Clark in First Sighting Since Pregnancy News - E! Online"], ["source", "Eonline.com"], ["author", "Pamela Avila"], ["description", "Former Vanderpump Rules star Stassi Schroeder steps out with Beau Clark in first sighting since pregnancy news."], ["url", "https://www.eonline.com/news/1160998/stassi-schroeder-steps-out-with-beau-clark-in-first-sighting-since-pregnancy-news"], ["img", "https://akns-images.eonline.com/eol_images/Entire_Site/2020513/rs_1200x1200-200613170419-1200-stassi-schroeder.ct.061320.jpg?fit=around|1080:1080&output-quality=90&crop=1080:1080;center,top"], ["created_at", "2020-06-14 07:50:13.770972"], ["updated_at", "2020-06-14 07:50:13.770972"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Auto Makers’ Reopening Complicated by Worker Absences Amid Covid Cases - The Wall Street Journal"], ["source", "The Wall Street Journal"], ["author", "Ben Foldy, Mike Colias"], ["description", "The pandemic that forced plants to close hangs over attempts to ramp up production"], ["url", "https://www.wsj.com/articles/auto-makers-reopening-complicated-by-worker-absences-amid-covid-cases-11592074008"], ["img", "https://images.wsj.net/im-197755/social"], ["created_at", "2020-06-14 07:50:13.775154"], ["updated_at", "2020-06-14 07:50:13.775154"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Outlast Trials - Official Teaser Trailer - GameSpot"], ["source", "YouTube"], ["description", "Watch the creepy teaser trailer for the horror first person game from Red Barrels. Set in the era of the Cold War, human guinea pigs are involuntarily recrui..."], ["url", "https://www.youtube.com/watch?v=hCgiwsIUI4g"], ["img", "https://i.ytimg.com/vi/hCgiwsIUI4g/maxresdefault.jpg"], ["created_at", "2020-06-14 07:50:13.779118"], ["updated_at", "2020-06-14 07:50:13.779118"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (24.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "news_articles" ("title", "source", "author", "description", "url", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Kim Jong Un's sister threatens military action against South Korea, promises 'tragic scene' at liaison office - Fox News"], ["source", "Fox News"], ["author", "Peter Aitken"], ["description", "Kim Yo Jong is making use of her elevated position."], ["url", "https://www.foxnews.com/world/kim-jong-un-sister-promises-tragic-scene-military-action-south-korea"], ["img", "https://static.foxnews.com/foxnews.com/content/uploads/2020/04/Kim-Yo-Jong.jpg"], ["created_at", "2020-06-14 07:50:13.782883"], ["updated_at", "2020-06-14 07:50:13.782883"]]
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/news_article.rb:23:in `block in get_data'
+  [1m[36mNewsArticle Load (0.6ms)[0m  [1m[34mSELECT "news_articles".* FROM "news_articles" LIMIT $1[0m  [["LIMIT", 11]]
