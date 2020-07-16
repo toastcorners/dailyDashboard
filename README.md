@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+dailyDashboard (backend)
 
-Things you may want to cover:
+An app to consolidate a feed of the top news articles, your horoscope (based on your birthday when creating a profile), and provide the weather. 
 
-* Ruby version
+The front end for this application can be found here: https://github.com/toastcorners/daily-dashboard-client
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
