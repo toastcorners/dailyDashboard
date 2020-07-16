@@ -6,8 +6,10 @@ A simple app to consolidate a feed of the top news articles, your horoscope (bas
 
 The front end for this application can be found here: https://github.com/toastcorners/daily-dashboard-client
 
-To run this application:
+To run this application, clone down the repo then:
 
 1.) bundle install
 
 2.) rails db:seed 
+
+3.) start the rails server by running rails s
